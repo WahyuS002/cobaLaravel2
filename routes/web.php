@@ -11,15 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('anime');
-});
 
-Route::get('/anime', function () {
-    return view('anime');
-});
-
-Route::get('/about', function () {
-    $nama = 'Wahyu Syahputra';
-    return view('about', ['nama' => $nama]);
-});
+Route::get('/', 'PagesController@home');
+Route::get('/anime', 'AnimeController@index');
