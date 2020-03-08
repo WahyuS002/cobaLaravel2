@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Anime extends Model
+class AnimeList extends Model
 {
-    protected $table = 'anime';
+    protected $table = 'animes';
 }

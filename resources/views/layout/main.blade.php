@@ -30,6 +30,9 @@
                         <a class="nav-link" href="{{ url('/anime') }}">Anime</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/list') }}">List</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ url('/about') }}">About</a>
                     </li>
                 </ul>

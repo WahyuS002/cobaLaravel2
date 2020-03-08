@@ -14,3 +14,7 @@
 
 Route::get('/', 'PagesController@home');
 Route::get('/anime', 'AnimeController@index');
+
+// List
+Route::get('list', 'AnimeListsController@index');
+Route::get('list/{animeList}', 'AnimeListsController@show');
