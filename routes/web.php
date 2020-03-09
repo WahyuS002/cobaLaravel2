@@ -16,5 +16,6 @@ Route::get('/', 'PagesController@home');
 Route::get('/anime', 'AnimeController@index');
 
 // List
-Route::get('list', 'AnimeListsController@index');
-Route::get('list/{animeList}', 'AnimeListsController@show');
+Route::get('/list', 'AnimeListsController@index');
+Route::post('/list', 'AnimeListsController@store');
+Route::get('/list/{animeList}', 'AnimeListsController@show');

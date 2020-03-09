@@ -36,7 +36,19 @@ class AnimeListsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $anime = new AnimeList();
+
+        // $anime->title = $request->title;
+        // $anime->image = $request->image;
+        // $anime->score = $request->score;
+        // $anime->episode = $request->episode;
+        // $anime->studio = $request->studio;
+
+        // $anime->save();
+
+        AnimeList::create($request->all());
+
+        redirect('AnimeList.index');
     }
 
     /**
