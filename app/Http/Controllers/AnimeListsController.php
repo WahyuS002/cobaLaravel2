@@ -25,7 +25,7 @@ class AnimeListsController extends Controller
      */
     public function create()
     {
-        //
+        return view('AnimeList.create');
     }
 
     /**
@@ -46,9 +46,19 @@ class AnimeListsController extends Controller
 
         // $anime->save();
 
+        $request->validate([
+            'title' => 'required',
+            'image' => 'required',
+            'score' => 'required',
+            'episode' => 'required',
+            'studio' => 'required',
+            'source' => 'required',
+            'synopsis' => 'required'
+        ]);
+
         AnimeList::create($request->all());
 
-        redirect('AnimeList.index');
+        return redirect('/list');
     }
 
     /**
